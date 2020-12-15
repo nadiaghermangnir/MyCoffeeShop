@@ -5,13 +5,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:orientation="vertical"
+=======
+>>>>>>> origin/master
     tools:context=".todo.item.ItemEditFragment">
 
     <ProgressBar
         android:id="@+id/progress"
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="match_parent"
+=======
+        android:layout_height="wrap_content"
+>>>>>>> origin/master
         android:indeterminate="true"
         android:visibility="gone" />
 
@@ -27,7 +34,10 @@
         android:layout_marginTop="24dp"
         android:ems="10"
         android:text="" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
     <EditText
         android:id="@+id/item_quantity"
         android:layout_width="wrap_content"
@@ -59,13 +69,17 @@
         android:ems="10"
         android:text="" />
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
+<<<<<<< HEAD
         android:layout_alignLeft="@+id/item_caffeine"
         android:layout_alignStart="@+id/item_caffeine"
         android:layout_below="@+id/item_caffeine"
@@ -84,5 +98,9 @@
         android:text="@string/delete"/>
 
 
+=======
+        app:srcCompat="@android:drawable/ic_menu_save" />
+
+>>>>>>> origin/master
 
 </RelativeLayout>

@@ -1,5 +1,6 @@
 package ro.ubbcluj.scs.gnir.mycoffeeshop.todo.data.remote
 
+<<<<<<< HEAD
 import android.util.Log
 import com.google.gson.GsonBuilder
 import kotlinx.coroutines.channels.Channel
@@ -15,12 +16,20 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.*
 import ro.ubbcluj.scs.gnir.mycoffeeshop.core.Api
 import ro.ubbcluj.scs.gnir.mycoffeeshop.core.Constants
+=======
+import com.google.gson.GsonBuilder
+import okhttp3.OkHttpClient
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.*
+>>>>>>> origin/master
 import ro.ubbcluj.scs.gnir.mycoffeeshop.todo.data.Item
 
 object ItemApi {
     private const val URL = "http://192.168.0.137:3000/"
 
     interface Service {
+<<<<<<< HEAD
         @GET("api/item")
         suspend fun find(): List<Item>
 
@@ -85,6 +94,24 @@ object ItemApi {
         }
     }
 /*    private val client: OkHttpClient = OkHttpClient.Builder().build()
+=======
+        @GET("/item")
+        suspend fun find(): List<Item>
+
+        @GET("/item/{id}")
+        suspend fun read(@Path("id") itemId: String): Item;
+
+        @Headers("Content-Type: application/json")
+        @POST("/item")
+        suspend fun create(@Body item: Item): Item
+
+        @Headers("Content-Type: application/json")
+        @PUT("/item/{id}")
+        suspend fun update(@Path("id") itemId: String, @Body item: Item): Item
+    }
+
+    private val client: OkHttpClient = OkHttpClient.Builder().build()
+>>>>>>> origin/master
 
     private var gson = GsonBuilder()
         .setLenient()
@@ -95,6 +122,11 @@ object ItemApi {
         .addConverterFactory(GsonConverterFactory.create(gson))
         .client(client)
         .build()
+<<<<<<< HEAD
 */
 
+=======
+
+    val service: Service = retrofit.create(Service::class.java)
+>>>>>>> origin/master
 }
