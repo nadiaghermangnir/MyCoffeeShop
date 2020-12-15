@@ -1,6 +1,6 @@
 package ro.ubbcluj.scs.gnir.mycoffeeshop.todo.data.remote
 
-<<<<<<< HEAD
+
 import android.util.Log
 import com.google.gson.GsonBuilder
 import kotlinx.coroutines.channels.Channel
@@ -16,20 +16,14 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.*
 import ro.ubbcluj.scs.gnir.mycoffeeshop.core.Api
 import ro.ubbcluj.scs.gnir.mycoffeeshop.core.Constants
-=======
-import com.google.gson.GsonBuilder
-import okhttp3.OkHttpClient
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.*
->>>>>>> origin/master
+
 import ro.ubbcluj.scs.gnir.mycoffeeshop.todo.data.Item
 
 object ItemApi {
     private const val URL = "http://192.168.0.137:3000/"
 
     interface Service {
-<<<<<<< HEAD
+
         @GET("api/item")
         suspend fun find(): List<Item>
 
@@ -83,7 +77,11 @@ object ItemApi {
             override fun onClosing(webSocket: WebSocket, code: Int, reason: String) {
             }
 
-            override fun onFailure(webSocket: WebSocket, t: Throwable, response: okhttp3.Response?) {
+            override fun onFailure(
+                webSocket: WebSocket,
+                t: Throwable,
+                response: okhttp3.Response?
+            ) {
                 Log.e("WebSocket", "onFailure", t)
                 t.printStackTrace()
             }
@@ -93,6 +91,7 @@ object ItemApi {
             }
         }
     }
+}
 /*    private val client: OkHttpClient = OkHttpClient.Builder().build()
 =======
         @GET("/item")
@@ -125,8 +124,3 @@ object ItemApi {
 <<<<<<< HEAD
 */
 
-=======
-
-    val service: Service = retrofit.create(Service::class.java)
->>>>>>> origin/master
-}

@@ -26,7 +26,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-<<<<<<< HEAD
         app:srcCompat="@android:drawable/ic_menu_add" />
 
     <Button
@@ -35,9 +34,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:text="@string/logout" />
-
-=======
-        app:srcCompat="@android:drawable/ic_dialog_email" />
->>>>>>> origin/master
 
 </FrameLayout>
